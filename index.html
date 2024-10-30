@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Bestie Forever?</title>
+    <style>
+        /* CSS styling */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            color: #fff;
+            text-align: center;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            max-width: 400px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+
+        .heart {
+            font-size: 3em;
+            color: #ffdddd;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 1em;
+            color: #ff7eb3;
+            background-color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background-color: #ffb6c1;
+            color: #fff;
+        }
+
+        /* Hidden message styles */
+        .message {
+            display: none;
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+        @media (max-width: 600px) {
+    h1 {
+        font-size: 1.8em; /* Adjust font size for smaller screens */
+    }
+
+    p {
+        font-size: 1em; /* Adjust paragraph font size */
+    }
+
+    .button {
+        padding: 8px 16px; /* Adjust button size */
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="heart">❤️</div>
+        <h1>Will You Be My Bestie Forever, Priya?</h1>
+        <p>Dear Priya,</p>
+        <p>You are not only my best friend but the person who makes life so much more special. So here’s to us, to many more laughs, adventures, and moments together.</p>
+        <p>Will you be my best friend forever?</p>
+        
+        <!-- Buttons -->
+        <div>
+            <span class="button" onclick="showMessage('yes')">Yes, of course!</span>
+            <span class="button" onclick="showMessage('thinking')">I'm thinking...</span>
+        </div>
+        
+        <!-- Messages -->
+        <div id="yesMessage" class="message">🎉 Yay! I knew you'd say yes! Let’s make more amazing memories together! 🎉</div>
+        <div id="thinkingMessage" class="message">🤔 Take your time, bestie! I’ll be here waiting for your answer. 😊</div>
+    </div>
+
+    <script>
+        // JavaScript function to show the appropriate message
+        function showMessage(choice) {
+            // Hide both messages initially
+            document.getElementById("yesMessage").style.display = "none";
+            document.getElementById("thinkingMessage").style.display = "none";
+            
+            // Show the message based on the choice
+            if (choice === 'yes') {
+                document.getElementById("yesMessage").style.display = "block";
+            } else if (choice === 'thinking') {
+                document.getElementById("thinkingMessage").style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
